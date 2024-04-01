@@ -1,3 +1,5 @@
+import Container from "./ui/container";
+
 const Footer = () => {
   return (
     <footer className="bg-white border-t">

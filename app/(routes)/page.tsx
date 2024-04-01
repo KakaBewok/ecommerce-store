@@ -1,8 +1,12 @@
+import Container from "@/components/ui/container";
+
 const HomePage = () => {
   return (
-    <div>
-      <h1> Hello Rizal</h1>
-    </div>
+    <Container>
+      <div className="space-y-10 pb-10">
+        <Billboard />
+      </div>
+    </Container>
   );
 };
 
