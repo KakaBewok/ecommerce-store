@@ -1,4 +1,5 @@
 import { Product } from "@/types";
+import NoResults from "@/components/ui/no-results";
 
 interface ProductListProps {
   title: string;
@@ -8,7 +9,8 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
   return (
     <div className="space-y-4">
-      <div>{title}</div>
+      <h3 className="font-bold text-3xl">{title}</h3>
+      {items.length === 0 && <NoResults />}
     </div>
   );
 };
