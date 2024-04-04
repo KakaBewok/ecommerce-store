@@ -1,3 +1,5 @@
+"use client";
+
 import { Product } from "@/types";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
@@ -13,7 +15,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
           src={data.images?.[0]?.url}
-          alt=""
+          alt="product image"
           fill
           className="aspect-square object-cover rounded-md"
         />
@@ -27,6 +29,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
                   onClick={onAddToCart} 
                   icon={<ShoppingCart size={20} className="text-gray-600" />} 
                 /> */}
+            test
           </div>
         </div>
       </div>
@@ -35,7 +38,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <p className="font-semibold text-lg">{data.name}</p>
         <p className="text-sm text-gray-500">{data.category?.name}</p>
       </div>
-      {/* Price & Reiew */}
+      {/* Price & Review */}
       <div className="flex items-center justify-between">
         {/* <Currency value={data?.price} /> */}
       </div>
