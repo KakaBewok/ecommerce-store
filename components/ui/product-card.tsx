@@ -18,6 +18,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const router = useRouter();
 
   const handleClick = () => {
+    // alert(`single product for ${data.id}`);
     router.push(`/product/${data?.id}`);
   };
 
@@ -34,7 +35,10 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   };
 
   return (
-    <div className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
+    <div
+      onClick={handleClick}
+      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4"
+    >
       {/* Image & actions */}
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
